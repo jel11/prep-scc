@@ -1,0 +1,51 @@
+@use 'variables' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background-color: $bg-main;
+  color: $text-primary;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.card {
+  background: $bg-card;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  padding: 24px;
+  margin-bottom: 16px;
+}
+
+.grade-5 { color: $success; font-weight: 500; }
+.grade-4 { color: $primary; font-weight: 500; }
+.grade-3 { color: $accent; font-weight: 500; }
+.grade-2 { color: $warn; font-weight: 500; }
+
+.mat-mdc-snack-bar-container {
+  &.success-snackbar .mdc-snackbar__surface {
+    background-color: $success;
+  }
+  &.error-snackbar .mdc-snackbar__surface {
+    background-color: $warn;
+  }
+}

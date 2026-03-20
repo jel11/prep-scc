@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: college-lms-db
+    environment:
+      POSTGRES_DB: college_lms
+      POSTGRES_USER: college_lms_user
+      POSTGRES_PASSWORD: college_lms_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U college_lms_user -d college_lms"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: college-lms-api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=college_lms;Username=college_lms_user;Password=college_lms_pass
+      - Jwt__Secret=YourSuperSecretKeyThatIsAtLeast32CharactersLong!
+      - Jwt__Issuer=CollegeLms
+      - Jwt__Audience=CollegeLmsClient
+    ports:
+      - "5000:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  postgres_data:

@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CollegeLms.Domain\CollegeLms.Domain.csproj" />
+    <ProjectReference Include="../CollegeLms.Domain/CollegeLms.Domain.csproj" />
   </ItemGroup>
 
 </Project>

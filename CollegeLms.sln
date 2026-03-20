@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollegeLms.Domain", "src\CollegeLms.Domain\CollegeLms.Domain.csproj", "{A1B2C3D4-1111-2222-3333-444455556666}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollegeLms.Domain", "src/CollegeLms.Domain/CollegeLms.Domain.csproj", "{A1B2C3D4-1111-2222-3333-444455556666}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollegeLms.Infrastructure", "src\CollegeLms.Infrastructure\CollegeLms.Infrastructure.csproj", "{A1B2C3D4-1111-2222-3333-444455557777}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollegeLms.Infrastructure", "src/CollegeLms.Infrastructure/CollegeLms.Infrastructure.csproj", "{A1B2C3D4-1111-2222-3333-444455557777}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollegeLms.Api", "src\CollegeLms.Api\CollegeLms.Api.csproj", "{A1B2C3D4-1111-2222-3333-444455558888}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollegeLms.Api", "src/CollegeLms.Api/CollegeLms.Api.csproj", "{A1B2C3D4-1111-2222-3333-444455558888}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollegeLms.UnitTests", "tests\CollegeLms.UnitTests\CollegeLms.UnitTests.csproj", "{A1B2C3D4-1111-2222-3333-444455559999}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollegeLms.UnitTests", "tests/CollegeLms.UnitTests/CollegeLms.UnitTests.csproj", "{A1B2C3D4-1111-2222-3333-444455559999}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollegeLms.IntegrationTests", "tests\CollegeLms.IntegrationTests\CollegeLms.IntegrationTests.csproj", "{A1B2C3D4-1111-2222-3333-44445555AAAA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollegeLms.IntegrationTests", "tests/CollegeLms.IntegrationTests/CollegeLms.IntegrationTests.csproj", "{A1B2C3D4-1111-2222-3333-44445555AAAA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

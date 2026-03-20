@@ -4,6 +4,7 @@ using CollegeLms.Api.Services;
 using CollegeLms.Domain.Enums;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CollegeLms.Api.Controllers;
 

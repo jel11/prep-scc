@@ -2,9 +2,6 @@ services:
   postgres:
     image: postgres:16-alpine
     container_name: college-lms-db
-    dns:
-      - 8.8.8.8
-      - 8.8.4.4
     environment:
       POSTGRES_DB: college_lms
       POSTGRES_USER: college_lms_user
@@ -24,9 +21,6 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: college-lms-api
-    dns:
-      - 8.8.8.8
-      - 8.8.4.4
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=college_lms;Username=college_lms_user;Password=college_lms_pass

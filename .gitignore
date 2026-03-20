@@ -1,0 +1,50 @@
+## .NET
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+*.swp
+*.*~
+
+## NuGet
+*.nupkg
+**/packages/*
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+bld/
+
+## Secrets
+appsettings.Development.json
+*.pfx
+*.p12
+
+## Angular / Node
+college-lms-client/node_modules/
+college-lms-client/dist/
+college-lms-client/.angular/
+college-lms-client/.sass-cache/
+npm-debug.log*
+yarn-error.log*
+
+## Uploads
+uploads/
+
+## OS
+.DS_Store
+Thumbs.db
+
+## IDE
+.idea/
+.vscode/
+*.iml

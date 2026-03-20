@@ -31,14 +31,41 @@ ng serve
 
 Приложение будет доступно на `http://localhost:4200`.
 
-### Запуск backend вручную
+### Локальный запуск без Docker
+
+Если Docker недоступен, можно запустить проект с локальным PostgreSQL.
+
+1. Установите PostgreSQL и создайте БД:
+
+```sql
+CREATE USER college_lms_user WITH PASSWORD 'college_lms_pass';
+CREATE DATABASE college_lms OWNER college_lms_user;
+```
+
+2. Запустите backend:
 
 ```bash
 cd src/CollegeLms.Api
 dotnet run
 ```
 
+Либо задайте connection string через переменную окружения:
+
+```bash
+export ConnectionStrings__DefaultConnection="Host=localhost;Port=5432;Database=college_lms;Username=college_lms_user;Password=college_lms_pass"
+dotnet run --project src/CollegeLms.Api
+```
+
 API будет доступен на `http://localhost:5000`. Swagger UI: `http://localhost:5000/swagger`.
+
+При первом запуске автоматически применяются миграции и создаётся администратор.
+
+**Возможные проблемы с Docker DNS:**
+Если `docker compose up` не может скачать образы — проверьте DNS. Добавьте в `/etc/docker/daemon.json`:
+```json
+{ "dns": ["8.8.8.8", "8.8.4.4"] }
+```
+Затем перезапустите Docker: `sudo systemctl restart docker`.
 
 ## Структура проекта
 
